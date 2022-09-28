@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/RudolphIgor/gulp2022#readme",
   "devDependencies": {
+    "del": "^7.0.0",
     "gulp": "^4.0.2"
   }
 }
