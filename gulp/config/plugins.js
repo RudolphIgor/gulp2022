@@ -8,4 +8,5 @@ export const plugins = {
 	replace: replace,
 	plumber: plumber,
 	notify: notify,
+	browserSync: browserSync,
 }
