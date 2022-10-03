@@ -4,3 +4,16 @@ body {
 	color: red;
 	
 }
+
+//RESPONSIVE 
+@media (max-width: 756px){
+	body {
+		color: green;
+	}
+}
+
+@media (max-width: 756px){
+	body {
+		font-size: 30px;
+	}
+}
