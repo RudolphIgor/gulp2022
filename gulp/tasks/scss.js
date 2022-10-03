@@ -21,7 +21,18 @@ export const scss = () => {
 	.pipe(sass({
 		outputStyle: 'expanded'
 	}))
+	.pipe(groupCssMediaQueries())
+	.pipe(webpbcss({}))
+	.pipe(
+		autoprefixer({
+			grid: true,
+			overrideBrowserslist: ["last 3 version"],
+			cascade: true
+		})
+	)
 	.pipe(app.plugins.replace(/@img\//g, '../img/'))
+	.pipe(app.gulp.dest(app.path.build.css))
+	.pipe(cleanCSS())
 	.pipe(rename({
 		extname: ".min.css"
 	}))

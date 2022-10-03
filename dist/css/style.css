@@ -1,0 +1,6 @@
+body {
+  background: url("../img/pic1.jpg") center 60%/auto auto no-repeat;
+  width: 100%;
+  color: red;
+}
+.webp body { background: url(../img/pic1.webp) center 60%/auto auto no-repeat; }
