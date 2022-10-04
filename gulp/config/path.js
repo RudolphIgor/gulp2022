@@ -8,18 +8,22 @@ const srcFolder = `./src`; //Папка с исходниками проекта
 export const path = {
 	build: {
 		js: `${buildFolder}/js/`,
+		images: `${buildFolder}/img/`,
 		html:`${buildFolder}/`,
 		files: `${buildFolder}/files/`,
 		css: `${buildFolder}/css/`,
 	},
 	src: {
 		js: `${srcFolder}/js/app.js`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+		svg: `${srcFolder}/img/**/*.svg`,
 		html: `${srcFolder}/*.html`,
 		files: `${srcFolder}/files/**/*.*`,
 		scss: `${srcFolder}/scss/style.scss`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		html: `${srcFolder}/**/*.html`,
 		files: `${srcFolder}/files/**/*.*`,
 		scss: `${srcFolder}/scss/**/*.scss`,
