@@ -7,16 +7,19 @@ const srcFolder = `./src`; //Папка с исходниками проекта
 
 export const path = {
 	build: {
+		js: `${buildFolder}/js/`,
 		html:`${buildFolder}/`,
 		files: `${buildFolder}/files/`,
 		css: `${buildFolder}/css/`,
 	},
 	src: {
+		js: `${srcFolder}/js/app.js`,
 		html: `${srcFolder}/*.html`,
 		files: `${srcFolder}/files/**/*.*`,
 		scss: `${srcFolder}/scss/style.scss`,
 	},
 	watch: {
+		js: `${srcFolder}/js/**/*.js`,
 		html: `${srcFolder}/**/*.html`,
 		files: `${srcFolder}/files/**/*.*`,
 		scss: `${srcFolder}/scss/**/*.scss`,
