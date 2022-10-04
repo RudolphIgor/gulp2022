@@ -36,7 +36,7 @@ export const scss = () => {
 	)
 	.pipe(app.plugins.replace(/@img\//g, '../img/'))
 	.pipe(app.gulp.dest(app.path.build.css))
-	.pipe(cleanCSS())
+	.pipe(cleanCSS()) 
 	.pipe(rename({
 		extname: ".min.css"
 	}))

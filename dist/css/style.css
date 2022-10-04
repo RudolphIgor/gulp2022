@@ -3,7 +3,8 @@
 
 body {
   width: 100%;
-  color: red;
+  color: blue;
+  background: url("../img/pic1.jpg") center 60%/auto auto no-repeat; 
 }
 
 @media (max-width: 756px) {
