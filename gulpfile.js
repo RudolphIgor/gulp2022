@@ -9,6 +9,8 @@ import { plugins } from "./gulp/config/plugins.js"
 
 //Передаем значения в глобальную переменную
 global.app = {
+	isBuild: process.argv.includes('--build'),
+	isDev: !process.argv.includes('--build'),
 	path: path,
 	gulp: gulp,
 	plugins: plugins,
@@ -34,8 +36,6 @@ function watcher () {
 	gulp.watch(path.watch.images, images)
 }
 
-//Создание SVG спрайта
-export { svgSprive }
 
 //Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle) ;
@@ -45,6 +45,13 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 
 //Построение сценариев выполнения задачь
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+
+//Экспорт сценариев
+export { dev }
+export { build }
+export { svgSprive }
+
 
 //Выполнение сценария по умолчанию
 gulp.task('default', dev);
